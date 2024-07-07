@@ -1,43 +1,42 @@
-import Image from 'next/image';
+"use client";
 
-import { Container,Row,Col,Stack,Button,Card,CardText } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Stack, Button, Card, CardText } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
+import MovieCard from "./MovieCard";
+import MovieForms from "./MovieForms";
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div>
-      <h1 style={{ fontSize: "24px", color: "red" }}>Home Movie List</h1>
-      <h2 style={{ fontSize: "28px", color: "yellow" }}>Aisyah Nur Hasunah</h2>
-      <h3 style={{ fontSize: "16px", color: "green" }}>kelas pemrograman web 2023-2024</h3>
+    <div className="container">
+      <div className="row">
+        <div className="col-md-6">
+          <h1 style={{ fontSize: "24px", color: "red" }}>Home Movie List</h1>
+          <h2 style={{ fontSize: "28px", color: "blue" }}>Aisyah Nur Hasunah</h2>
+          <h3 style={{ fontSize: "16px", color: "green" }}>kelas pemrograman web 2023-2024</h3>
 
-      <Stack direction="horizontal" gap={2}>
-  <Button as="a" variant="primary">
-    Rating
-  </Button>
-  <Button as="a" variant="success">
-    Button as link
-  </Button>
-</Stack>
-<Card className= 'bg-transparent text-white text-center movieImage'>
-    <Image src= "https://upload.wikimedia.org/wikipedia/id/d/d2/Hangout-film.jpg" 
-    alt="Card image" height="300" width ="480"></Image>
-    
-    {/* <img className= "card-img-top"
-    src= "https://upload.wikimedia.org/wikipedia/id/d/d2/Hangout-film.jpg"  
-    alt="Card image cap"></img> */}
-
-    {/* <img className= "card-img-top"
-    src= "https://i0.wp.com/stories.briefer.id/wp-content/uploads/2024/02/agak-laen.jpg?w=720&ssl=1"  
-    alt="Card image cap"></img> */}
-    
-    <div className= 'bg-dark p-2 m-1'>
-    <CardText>Hangout</CardText>
-    <CardText>Bagus 3.8/4.0</CardText>
-    <CardText>Film By Raditya Dika</CardText>
-    <CardText>Rilis Tahun 2016</CardText>
-    </div>
-    </Card>
-
+          <Stack direction="horizontal" gap={2}>
+            <Button as="a" variant="primary">
+              Tombol link primer
+            </Button>
+            <Button as="a" variant="success">
+              Tombol link sukses
+            </Button>
+          </Stack>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-8">
+          <br />
+          <MovieForms />
+          <br />
+        </div>
+      </div>
+      <div className='bg-info'>
+        <MovieCard />
+      </div>
     </div>
   );
-} 
+}
