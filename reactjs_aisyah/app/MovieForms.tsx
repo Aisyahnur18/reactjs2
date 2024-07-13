@@ -12,6 +12,7 @@ const MovieForms = () => {
  const [deskripsi, setDeskripsi] = useState('');
  const [rating, setRating] = useState('');
 
+
     const fileInputRef = useRef(null);
 
 
@@ -90,6 +91,7 @@ return (
     />
     </div>
   </div> 
+  
  
   
   <div className="form-group row">

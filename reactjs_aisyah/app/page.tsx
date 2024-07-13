@@ -11,12 +11,19 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="container">
+    <div
+    style={{
+      minHeight: '100vh',
+      backgroundColor: 'blue',
+      padding: '20px',
+      color: 'white'
+    }}
+  >
       <div className="row">
         <div className="col-md-6">
-          <h1 style={{ fontSize: "24px", color: "red" }}>Home Movie List</h1>
-          <h2 style={{ fontSize: "28px", color: "blue" }}>Aisyah Nur Hasunah</h2>
-          <h3 style={{ fontSize: "16px", color: "green" }}>kelas pemrograman web 2023-2024</h3>
+          <h1 style={{ fontSize: "24px", color: "white" }}>Home Movie List</h1>
+          <h2 style={{ fontSize: "28px", color: "orange" }}>Aisyah Nur Hasunah</h2>
+          <h3 style={{ fontSize: "16px", color: "white" }}>kelas pemrograman web 2023-2024</h3>
 
           <Stack direction="horizontal" gap={2}>
             <Button as="a" variant="primary">
@@ -38,7 +45,7 @@ export default function Home() {
           <br />
         </div>
       </div>
-      <div className='bg-info'>
+      <div className='bg-primary'>
         <MovieCard />
       </div>
     </div>

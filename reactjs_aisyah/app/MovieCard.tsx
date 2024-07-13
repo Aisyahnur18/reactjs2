@@ -61,6 +61,7 @@ const MovieCard = () => {
                 </div>
                 <div className="bg-dark p-2 m-1">
                   <CardText>{movie.judul}</CardText>
+                  <CardText>Sutradara: {movie.sutradara}</CardText>
                   <CardText>Rating: {movie.rating}</CardText>
                 </div>
               </Card>
