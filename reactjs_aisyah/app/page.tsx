@@ -19,8 +19,8 @@ export default function Home() {
       color: 'white'
     }}
   >
-      <div className="row">
-        <div className="col-md-6">
+      <div className="row text-center">
+        <div className="col-md">
           <h1 style={{ fontSize: "24px", color: "white" }}>Home Movie List</h1>
           <h2 style={{ fontSize: "28px", color: "orange" }}>Aisyah Nur Hasunah</h2>
           <h3 style={{ fontSize: "16px", color: "white" }}>kelas pemrograman web 2023-2024</h3>
@@ -33,6 +33,7 @@ export default function Home() {
               Tombol link sukses
             </Button>
           </Stack>
+          
         </div>
       </div>
       <div className="row">
@@ -40,14 +41,14 @@ export default function Home() {
           <br />
           <MovieForms />
           <br />
-          <br />
-          <MovieSlide />
-          <br />
         </div>
       </div>
       <div className='bg-primary'>
         <MovieCard />
       </div>
+      <br />
+          <MovieSlide />
+          <br />
     </div>
   
 
